@@ -261,6 +261,7 @@ impl<R: Read> DdsDecoder<R> {
                 b"DXT1" => DxtVariant::DXT1,
                 b"DXT3" => DxtVariant::DXT3,
                 b"DXT5" => DxtVariant::DXT5,
+                b"ATI2" => DxtVariant::DXT5,
                 b"DX10" => {
                     let dx10_header = DX10Header::from_reader(&mut r)?;
                     // Format equivalents were taken from https://docs.microsoft.com/en-us/windows/win32/direct3d11/texture-block-compression-in-direct3d-11
